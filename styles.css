@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html {
+    font-size: 15px;
+}
+
+#add-btn {
+    margin: 2rem auto;
+    background-color: rgb(182, 182, 182);
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+#add-btn:hover {
+    background-color: rgb(150, 149, 149);
+}
+
+.card-container {
+    padding: 1rem 5rem;
+    
+}

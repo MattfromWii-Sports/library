@@ -23,5 +23,18 @@
                 </div>
             </div>
         </div>
+        <dialog id="dialog-book" open>
+            <form>
+                <p>Add Book</p>
+                <input placeholder="Title" type="text" id="title" name="title" maxlength="100" required>
+                <input placeholder="Author" type="text" id="author" name="author" maxlength="100" required>
+                <input placeholder="Pages" type="text" id="pages" name="pages" maxlength="10" required>
+                <div class="read-check">
+                    <p>Read</p>
+                    <input type="checkbox" id="read" name="read" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </dialog>
     </body>
 </html>

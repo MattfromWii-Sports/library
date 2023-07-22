@@ -23,15 +23,15 @@
                 </div>
             </div>
         </div>
-        <dialog id="dialog-book" open>
+        <dialog id="dialog-book">
             <form>
-                <p>Add Book</p>
+                <h4>Add Book</h4>
                 <input placeholder="Title" type="text" id="title" name="title" maxlength="100" required>
                 <input placeholder="Author" type="text" id="author" name="author" maxlength="100" required>
-                <input placeholder="Pages" type="text" id="pages" name="pages" maxlength="10" required>
+                <input placeholder="Pages" type="number" id="pages" name="pages" maxlength="10" required>
                 <div class="read-check">
                     <p>Read</p>
-                    <input type="checkbox" id="read" name="read" required>
+                    <input type="checkbox" id="read" name="read">
                 </div>
                 <button type="submit">Submit</button>
             </form>

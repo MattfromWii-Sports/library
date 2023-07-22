@@ -6,6 +6,9 @@
 html {
     font-size: 15px;
 }
+body {
+    width: 100vw;
+}
 
 #add-btn {
     margin: 2rem auto;
@@ -72,25 +75,29 @@ html {
 #dialog-book {
     z-index: 1;
     position: fixed;
-    width: 300px;
-    padding: 1.5rem 1rem;
+    padding: 2rem 3rem;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: burlywood;
+    background-color: gainsboro;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+dialog::backdrop {
+    background-color: rgba(221, 224, 0, 0.315);
 }
 #dialog-book form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1.5rem;
 }
-form > p {
+form > h4 {
     font-size: 1.5rem;
-    font-weight: 500;
 }
 form input {
-    font-size: 1.25rem;
-    padding: 10px;
+    font-size: 1.4rem;
+    padding: 12px;
     border-radius: 5px;
     border-style: none;
     height: 1rem;
@@ -107,16 +114,17 @@ form input:focus {
     margin-top: -.2rem;
 }
 .read-check > p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 .read-check > input {
-    width: 1rem;
-    height: 1rem;
+    width: 1.1rem;
+    height: 1.1rem;
 }
 form button {
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 500;
-    padding: 8px 20px;
+    width: 100%;
+    padding: .75rem;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 8px;
 }

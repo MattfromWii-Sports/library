@@ -6,7 +6,7 @@
 html {
     font-size: 15px;
     --background-clr-main: #d4edea;
-    --background-clr-sec: #f0ba94;
+    --background-clr-sec: #ffb987;
     --background-clr-misc: #dba9b7;
 }
 body {
@@ -91,9 +91,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-dialog::backdrop {
-    background-color: var(--background-clr-misc, rgba(255, 182, 193, 0.5));
-}
 #dialog-book form {
     display: flex;
     flex-direction: column;
@@ -119,7 +116,7 @@ form input:focus {
     justify-content: center;
     align-items: center;
     gap: .8rem;
-    margin-top: -.2rem;
+    margin-top: -.5rem;
 }
 .read-check > p {
     font-size: 1.5rem;
@@ -127,12 +124,13 @@ form input:focus {
 .read-check > input {
     width: 1.1rem;
     height: 1.1rem;
+    margin-top: 4px;
 }
 form button {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 500;
     width: 100%;
-    padding: .75rem;
+    padding: .7rem;
     border: 1px solid black;
     border-radius: 8px;
 }

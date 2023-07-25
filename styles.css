@@ -39,44 +39,48 @@ body {
     background-color: whitesmoke;
     padding: 1.5rem;
     border-radius: 20px;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    border: 2px solid black;
-    gap: 5px;
-}
-.card-information {
-    grid-row: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 1.1rem;
+    justify-content: space-between;
+    border: 2px solid black;
+    gap: 1rem;
 }
-.card-information > h2 {
+.card > h2 {
     font-size: 1.5rem;
+    text-align: center;
+    overflow-wrap: break-word;
 }
-.card-information > h3,
-.card-information > p {
+.card > h3,
+.card > p {
     font-size: 1.2rem;
+    text-align: center;
+    overflow-wrap: break-word;
 }
-.card-buttons {
-    grid-row: 2;
+.card > div{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     margin-top: 1rem;
-}
-.card-buttons > button {
-    font-size: 1.1rem;
     width: 100%;
-    height: 50px;
+}
+.card button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: .8rem;
     border-radius: 10px;
     border: 2px solid black;
 }
-.card-buttons > button:nth-of-type(2) {
+.card button:nth-of-type(2) {
     background-color: var(--background-clr-main, silver);
+}
+.read-btn {
+    background-color: rgb(3, 196, 3);
+}
+.notread-btn {
+    background-color: red;
 }
 
 /*Modal*/

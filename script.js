@@ -1,10 +1,9 @@
-let myLibrary = [
-
-];
+let myLibrary = [];
 
 const addNewBookBtn = document.getElementById('add-btn');
 const dialog = document.getElementById('dialog-book');
 const form = document.querySelector('form');
+let stats = document.querySelectorAll('button.status-btn');
 
 const titleForm = document.querySelector('#title');
 const authorForm = document.querySelector('#author');
@@ -18,7 +17,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     addBookToLibrary();
     createPages();
-    resetAll();
+    resetModal();
     dialog.close();
 });
 
@@ -38,19 +37,19 @@ const pageContainer = document.querySelector('.card-container');
 function createPages() {
     pageContainer.innerHTML = ''; //Remove previous cards
     for (let i=0; i<myLibrary.length; i++) {
-        let card = document.createElement('div');
+        const card = document.createElement('div');
         card.classList.add('card');
         card.dataset.index = `${i}`;
-        let cardTitle = document.createElement('h2');
-        let cardAuthor = document.createElement('h3');
-        let cardPages = document.createElement('p');
+        const cardTitle = document.createElement('h2');
+        const cardAuthor = document.createElement('h3');
+        const cardPages = document.createElement('p');
         cardTitle.textContent = myLibrary[i].title;
         cardAuthor.textContent = myLibrary[i].author;
         cardPages.textContent = `${myLibrary[i].pages} pages`;
-        let cardButtons = document.createElement('div');
-        let cardRead = document.createElement('button');
+        const cardButtons = document.createElement('div');
+        const cardRead = document.createElement('button');
         cardRead.classList.add('status-btn');
-        let cardRemove = document.createElement('button');
+        const cardRemove = document.createElement('button');
         cardRemove.classList.add('remove-btn');
         if (myLibrary[i].read === true) {
             cardRead.textContent = "Read";
@@ -67,10 +66,28 @@ function createPages() {
         card.appendChild(cardButtons);
         cardButtons.appendChild(cardRead);
         cardButtons.appendChild(cardRemove);
+        cardButtonStatus();
     }
 }
 
-function resetAll() {
+function cardButtonStatus() {
+    stats = document.querySelectorAll('button.status-btn');
+    stats.forEach(btn => btn.addEventListener('click', i()));    
+}
+function i() {
+    console.log();
+    /*if (a.classList.contains('read-btn')) {
+        a.textContent = 'Not Read';
+        a.classList.remove('read-btn');
+        a.classList.add('notread-btn');
+    } else {
+        a.textContent = 'Read';
+        a.classList.remove('notread-btn');
+        a.classList.add('read-btn');
+    }*/
+}
+
+function resetModal() {
     titleForm.value = '';
     authorForm.value = '';
     pagesForm.value = '';

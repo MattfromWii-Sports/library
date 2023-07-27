@@ -49,13 +49,13 @@ body {
 .card > h2 {
     font-size: 1.5rem;
     text-align: center;
-    overflow-wrap: break-word;
+    word-break: break-all;
 }
 .card > h3,
 .card > p {
     font-size: 1.2rem;
     text-align: center;
-    overflow-wrap: break-word;
+    word-break: break-all;
 }
 .card > div{
     display: flex;

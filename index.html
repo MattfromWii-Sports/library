@@ -11,7 +11,7 @@
             <p>+ Add Book</p>
         </div>
         <div class="card-container">
-            <div class="card">
+        <!--<div class="card">
                 <h2>Title</h2>
                 <h3>Author</h3>
                 <p>Pages</p>
@@ -19,14 +19,14 @@
                     <button class="status-btn">Read</button>
                     <button class="remove-btn">Remove</button>
                 </div>
-            </div>
+            </div>-->
         </div>
         <dialog id="dialog-book">
             <form>
                 <h4>Add Book</h4>
                 <input placeholder="Title" type="text" id="title" name="title" maxlength="100" required>
                 <input placeholder="Author" type="text" id="author" name="author" maxlength="100" required>
-                <input placeholder="Pages" type="number" id="pages" name="pages" maxlength="10" required>
+                <input placeholder="Pages" type="number" id="pages" name="pages" max="100000" required>
                 <div class="read-check">
                     <p>Read</p>
                     <input type="checkbox" id="read" name="read">

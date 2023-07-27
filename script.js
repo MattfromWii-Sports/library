@@ -68,19 +68,25 @@ function createPages() {
     }
 }
 
-const cardButtonParent = document.querySelector('div.card-container');
-cardButtonParent.addEventListener('click', function(e) {
+pageContainer.addEventListener('click', function(e) {
     let targetC = e.target; //Element pressed inside card-container
-    if (targetC.nodeName == 'BUTTON' && targetC.classList.contains('status-btn')) {
+    if (targetC.nodeName !== 'BUTTON') {
+        return
+    } else if (targetC.classList.contains('status-btn')) {
         if (targetC.classList.contains('read-btn')) {
             targetC.textContent = 'Not Read';
             targetC.classList.remove('read-btn');
             targetC.classList.add('notread-btn');
+            myLibrary[targetC.parentNode.parentNode.dataset.index].read = false;
         } else {
             targetC.textContent = 'Read';
             targetC.classList.remove('notread-btn');
             targetC.classList.add('read-btn');
+            myLibrary[targetC.parentNode.parentNode.dataset.index].read = true;
         }
+    } else if (targetC.classList.contains('remove-btn')) {
+        myLibrary.splice(targetC.parentNode.parentNode.dataset.index, 1);
+        createPages();
     }
 });
 

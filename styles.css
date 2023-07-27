@@ -26,7 +26,7 @@ body {
     cursor: pointer;
 }
 #add-btn:hover {
-    background-color: rgb(160, 160, 160);
+    filter: brightness(86%);
 }
 
 .card-container {
@@ -73,14 +73,19 @@ body {
     border-radius: 10px;
     border: 2px solid black;
 }
-.card button:nth-of-type(2) {
+.card button.remove-btn {
     background-color: var(--background-clr-main, silver);
 }
+.card button.remove-btn:hover,
+.card button.status-btn:hover {
+    filter: brightness(90%);
+}
+
 .read-btn {
-    background-color: rgb(3, 196, 3);
+    background-color: rgb(1, 218, 1);
 }
 .notread-btn {
-    background-color: red;
+    background-color: rgb(255, 45, 45);
 }
 
 /*Modal*/
@@ -137,4 +142,7 @@ form button {
     padding: .7rem;
     border: 1px solid black;
     border-radius: 8px;
+}
+form button:hover {
+    filter: brightness(90%);
 }

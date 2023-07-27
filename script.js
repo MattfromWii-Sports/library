@@ -3,7 +3,6 @@ let myLibrary = [];
 const addNewBookBtn = document.getElementById('add-btn');
 const dialog = document.getElementById('dialog-book');
 const form = document.querySelector('form');
-let stats = document.querySelectorAll('button.status-btn');
 
 const titleForm = document.querySelector('#title');
 const authorForm = document.querySelector('#author');
@@ -66,26 +65,24 @@ function createPages() {
         card.appendChild(cardButtons);
         cardButtons.appendChild(cardRead);
         cardButtons.appendChild(cardRemove);
-        cardButtonStatus();
     }
 }
 
-function cardButtonStatus() {
-    stats = document.querySelectorAll('button.status-btn');
-    stats.forEach(btn => btn.addEventListener('click', i()));    
-}
-function i() {
-    console.log();
-    /*if (a.classList.contains('read-btn')) {
-        a.textContent = 'Not Read';
-        a.classList.remove('read-btn');
-        a.classList.add('notread-btn');
-    } else {
-        a.textContent = 'Read';
-        a.classList.remove('notread-btn');
-        a.classList.add('read-btn');
-    }*/
-}
+const cardButtonParent = document.querySelector('div.card-container');
+cardButtonParent.addEventListener('click', function(e) {
+    let targetC = e.target; //Element pressed inside card-container
+    if (targetC.nodeName == 'BUTTON' && targetC.classList.contains('status-btn')) {
+        if (targetC.classList.contains('read-btn')) {
+            targetC.textContent = 'Not Read';
+            targetC.classList.remove('read-btn');
+            targetC.classList.add('notread-btn');
+        } else {
+            targetC.textContent = 'Read';
+            targetC.classList.remove('notread-btn');
+            targetC.classList.add('read-btn');
+        }
+    }
+});
 
 function resetModal() {
     titleForm.value = '';

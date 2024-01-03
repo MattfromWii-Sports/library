@@ -1,19 +1,98 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "albert-text", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 1px;
 }
 html {
     font-size: 15px;
-    --background-clr-main: #d4edea;
-    --background-clr-sec: #ffb987;
-    --background-clr-misc: #dba9b7;
+    --background-clr-main: rgb(153,153,153);
+    --background-clr-sec: rgb(51,51,51);
 }
 body {
-    width: 100vw;
-    background-color: var(--background-clr-main, silver);
+    min-width: 100vw;
+    min-height: 100svh;
+    background-color: var(--background-clr-main);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 4fr;
+}
+@font-face {
+    font-family: albert-text;
+    src: url(AlbertText-Bold.ttf);
 }
 
+/*Form*/
+.sidebar {
+    grid-area: 1 / 1 / -1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-clr-sec); 
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+form > h4 {
+    font-size: 1.5rem;
+}
+form input {
+    font-size: 1.4rem;
+    padding: 12px;
+    border-radius: 5px;
+    border-style: none;
+    height: 1rem;
+    width: 18rem;
+}
+form input:focus {
+    outline: none;
+    border: none;
+}
+.read-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    margin-top: -.5rem;
+}
+.read-check > p {
+    font-size: 1.5rem;
+    color: white;
+}
+.read-check > input {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-top: 4px;
+}
+form button {
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 100%;
+    padding: .7rem;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+form button:hover {
+    filter: brightness(90%);
+}
+
+/*Title*/
+/* To add: background image of wood plank */
+.title { 
+    font-size: 5rem;
+    padding: 1rem;
+    grid-area: 1 / 2 / 2 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: burlywood;
+}
+
+/*Card container*/
 #add-btn {
     margin: 2rem auto;
     background-color: rgb(190, 190, 190);
@@ -31,9 +110,12 @@ body {
 
 .card-container {
     padding: 1rem 5rem;
+    grid-area: 2 / 2 / -1 / -1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
+    background-color: var(--background-clr-main);
+
 }
 .card {
     background-color: whitesmoke;
@@ -88,61 +170,3 @@ body {
     background-color: rgb(255, 45, 45);
 }
 
-/*Modal*/
-#dialog-book {
-    z-index: 1;
-    position: fixed;
-    padding: 2rem 3rem;
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: var(--background-clr-sec, orange);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-#dialog-book form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
-form > h4 {
-    font-size: 1.5rem;
-}
-form input {
-    font-size: 1.4rem;
-    padding: 12px;
-    border-radius: 5px;
-    border-style: none;
-    height: 1rem;
-}
-form input:focus {
-    outline: none;
-    border: none;
-}
-.read-check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .8rem;
-    margin-top: -.5rem;
-}
-.read-check > p {
-    font-size: 1.5rem;
-}
-.read-check > input {
-    width: 1.1rem;
-    height: 1.1rem;
-    margin-top: 4px;
-}
-form button {
-    font-size: 1.3rem;
-    font-weight: 500;
-    width: 100%;
-    padding: .7rem;
-    border: 1px solid black;
-    border-radius: 8px;
-}
-form button:hover {
-    filter: brightness(90%);
-}

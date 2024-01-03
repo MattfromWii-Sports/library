@@ -7,23 +7,8 @@
         <title>Library</title>
     </head>
     <body>
-        <div id="add-btn">
-            <p>+ Add Book</p>
-        </div>
-        <div class="card-container">
-        <!--<div class="card">
-                <h2>Title</h2>
-                <h3>Author</h3>
-                <p>Pages</p>
-                <div>
-                    <button class="status-btn">Read</button>
-                    <button class="remove-btn">Remove</button>
-                </div>
-            </div>-->
-        </div>
-        <dialog id="dialog-book">
+        <div class="sidebar">
             <form>
-                <h4>Add Book</h4>
                 <input placeholder="Title" type="text" id="title" name="title" maxlength="100" required>
                 <input placeholder="Author" type="text" id="author" name="author" maxlength="100" required>
                 <input placeholder="Pages" type="number" id="pages" name="pages" max="100000" required>
@@ -31,8 +16,22 @@
                     <p>Read</p>
                     <input type="checkbox" id="read" name="read">
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit">Add Book</button>
             </form>
-        </dialog>
+        </div>
+        <div class="title">Ye Old Library</div>
+        <div class="card-container">
+        <!--Template:
+            <div class="card">
+                <h2>Title</h2>
+                <h3>Author</h3>
+                <p>Pages</p>
+                <div>
+                    <button class="status-btn">Read</button>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+        -->
+        </div>
     </body>
 </html>

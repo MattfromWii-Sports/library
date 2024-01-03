@@ -15,7 +15,7 @@ body {
     background-color: var(--background-clr-main);
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
 }
 @font-face {
     font-family: albert-text;
@@ -82,10 +82,10 @@ form button:hover {
 
 /*Title*/
 /* To add: background image of wood plank */
-.title { 
+.title {
+    grid-area: 1 / 2 / 2 / -1;
     font-size: 5rem;
     padding: 1rem;
-    grid-area: 1 / 2 / 2 / -1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,24 +93,10 @@ form button:hover {
 }
 
 /*Card container*/
-#add-btn {
-    margin: 2rem auto;
-    background-color: rgb(190, 190, 190);
-    font-size: 2rem;
-    font-weight: 500;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-}
-#add-btn:hover {
-    filter: brightness(86%);
-}
-
+/* To add: card color scheme */
 .card-container {
-    padding: 1rem 5rem;
     grid-area: 2 / 2 / -1 / -1;
+    padding: 1rem 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
@@ -118,7 +104,6 @@ form button:hover {
 
 }
 .card {
-    background-color: whitesmoke;
     padding: 1.5rem;
     border-radius: 20px;
     display: flex;
@@ -127,6 +112,9 @@ form button:hover {
     justify-content: space-between;
     border: 2px solid black;
     gap: 1rem;
+    height: 18rem;
+    color: whitesmoke;
+    background-color: var(--background-clr-sec);
 }
 .card > h2 {
     font-size: 1.5rem;
@@ -145,7 +133,6 @@ form button:hover {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    margin-top: 1rem;
     width: 100%;
 }
 .card button {
@@ -156,7 +143,7 @@ form button:hover {
     border: 2px solid black;
 }
 .card button.remove-btn {
-    background-color: var(--background-clr-main, silver);
+    background-color: white;
 }
 .card button.remove-btn:hover,
 .card button.status-btn:hover {

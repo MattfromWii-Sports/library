@@ -7,15 +7,16 @@
 html {
     font-size: 15px;
     --background-clr-main: rgb(153,153,153);
-    --background-clr-sec: rgb(51,51,51);
+    --background-clr-sec: rgb(51,51,51); 
+    /* Use this: https://www.color-hex.com/color-palette/184 */
 }
 body {
-    min-width: 100vw;
+    max-width: 100vw;
     min-height: 100svh;
     background-color: var(--background-clr-main);
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr;
 }
 @font-face {
     font-family: albert-text;
@@ -25,10 +26,8 @@ body {
 /*Form*/
 .sidebar {
     grid-area: 1 / 1 / -1 / 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--background-clr-sec); 
+    padding: 0 2rem;
+    background-color: var(--background-clr-sec);
 }
 form {
     display: flex;
@@ -36,6 +35,10 @@ form {
     align-items: center;
     gap: 1.5rem;
     padding: 1rem;
+    min-width: 18rem;
+    position: sticky;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 form > h4 {
     font-size: 1.5rem;
@@ -45,8 +48,8 @@ form input {
     padding: 12px;
     border-radius: 5px;
     border-style: none;
-    height: 1rem;
-    width: 18rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 form input:focus {
     outline: none;
@@ -80,23 +83,27 @@ form button:hover {
     filter: brightness(90%);
 }
 
-/*Title*/
+/*Main*/
+.main {
+    grid-area: 1 / 2 / -1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 /* To add: background image of wood plank */
 .title {
-    grid-area: 1 / 2 / 2 / -1;
     font-size: 5rem;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: burlywood;
+    height: 8rem;
 }
 
-/*Card container*/
 /* To add: card color scheme */
 .card-container {
-    grid-area: 2 / 2 / -1 / -1;
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;

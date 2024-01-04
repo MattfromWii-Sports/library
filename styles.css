@@ -93,12 +93,18 @@ form button:hover {
 /* To add: background image of wood plank */
 .title {
     font-size: 5rem;
+    color: white;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: burlywood;
+    background-image: url(joshua-bartell-6vvIBTvL90A-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 8rem;
+    min-width: 25rem;
+    text-wrap: nowrap;
+    box-sizing: border-box;
 }
 
 /* To add: card color scheme */

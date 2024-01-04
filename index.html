@@ -8,10 +8,11 @@
     </head>
     <body>
         <div class="sidebar">
+            <h1>Welcome Traveller!</h1>
             <form>
-                <input placeholder="Title" type="text" id="title" name="title" maxlength="100" required>
-                <input placeholder="Author" type="text" id="author" name="author" maxlength="100" required>
-                <input placeholder="Pages" type="number" id="pages" name="pages" max="100000" required>
+                <input placeholder="Title" type="text" id="title" name="title" maxlength="100" autocomplete="off" required>
+                <input placeholder="Author" type="text" id="author" name="author" maxlength="100" autocomplete="off" required>
+                <input placeholder="Pages" type="number" id="pages" name="pages" max="100000" autocomplete="off" required>
                 <div class="read-check">
                     <p>Read</p>
                     <input type="checkbox" id="read" name="read">
@@ -24,33 +25,33 @@
             <div class="card-container">
 
                 <div class="card">
-                    <h2>Title</h2>
-                    <h3>Author</h3>
-                    <p>Pages</p>
+                    <h2>Green Eggs and Ham</h2>
+                    <h3>Dr. Seuss</h3>
+                    <p>30 Pages</p>
                     <div>
-                        <button class="status-btn">Read</button>
+                        <button class="status-btn notread-btn">Read</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>The Pilgrim's Progress</h2>
+                    <h3>John Bunyan</h3>
+                    <p>354 Pages</p>
+                    <div>
+                        <button class="status-btn notread-btn">Read</button>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>One Piece</h2>
+                    <h3>Eiichiro Oda</h3>
+                    <p>1,000,000+</p>
+                    <div>
+                        <button class="status-btn notread-btn">Read</button>
                         <button class="remove-btn">Remove</button>
                     </div>
                 </div>
                 <!-- To delete -->
-                <div class="card">
-                    <h2>Title</h2>
-                    <h3>Author</h3>
-                    <p>Pages</p>
-                    <div>
-                        <button class="status-btn">Read</button>
-                        <button class="remove-btn">Remove</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <h2>Title</h2>
-                    <h3>Author</h3>
-                    <p>Pages</p>
-                    <div>
-                        <button class="status-btn">Read</button>
-                        <button class="remove-btn">Remove</button>
-                    </div>
-                </div>
                 <div class="card">
                     <h2>Title</h2>
                     <h3>Author</h3>

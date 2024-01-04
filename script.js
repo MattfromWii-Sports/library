@@ -92,5 +92,10 @@ const library = (() => {
         pagesForm.value = '';
         readForm.checked = false;
     }
-})();
 
+    //Adding starting cards
+    myLibrary.push(new Book('The Pilgrim\s Progress', 'John Bunyan', 354, true));
+    myLibrary.push(new Book('One Piece', 'Eiichiro Oda', '22,000+', false));
+    myLibrary.push(new Book('Green Eggs And Ham', 'Dr. Seuss', 72, false));
+    createPages();
+})();
